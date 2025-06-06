@@ -1,0 +1,11 @@
+<% layout('../layout', {title: 'แดชบอร์ด', pages: pages}); %>
+<h2>แดชบอร์ด</h2>
+<a href="/admin/add" class="btn btn-success mb-3">เพิ่มหน้าใหม่</a>
+<table class="table">
+  <thead><tr><th>ชื่อหน้า</th><th>ลิงก์</th></tr></thead>
+  <tbody>
+  <% pages.forEach(function(p){ %>
+    <tr><td><%= p.title %></td><td>/page/<%= p.slug %></td></tr>
+  <% }); %>
+  </tbody>
+</table>

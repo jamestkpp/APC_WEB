@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= title %></title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/">Ayutthaya Polytechnic College</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <% pages.forEach(function(p){ %>
+        <li class="nav-item"><a class="nav-link" href="/page/<%= p.slug %>"><%= p.title %></a></li>
+        <% }); %>
+      </ul>
+    </div>
+  </div>
+</nav>
+<div class="container mt-4">
+<%- body %>
+</div>
+
+<div id="cookie-banner" class="cookie-banner">
+  เว็บไซต์นี้ใช้คุกกี้เพื่อปรับปรุงประสบการณ์ของคุณ <button id="accept-cookies" class="btn btn-light btn-sm">ยอมรับ</button>
+</div>
+<div id="pdpa-notice" class="pdpa-notice">
+  วิทยาลัยปฏิบัติตามพระราชบัญญัติคุ้มครองข้อมูลส่วนบุคคล (PDPA)
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="/js/cookie.js"></script>
+</body>
+</html>
