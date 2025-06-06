@@ -1,0 +1,17 @@
+<% layout('../layout', {title: 'เพิ่มหน้า', pages: pages}); %>
+<h2>เพิ่มหน้าใหม่</h2>
+<form method="POST">
+  <div class="mb-3">
+    <label class="form-label">ชื่อหน้า</label>
+    <input type="text" name="title" class="form-control" required>
+  </div>
+  <div class="mb-3">
+    <label class="form-label">Slug (ลิงก์)</label>
+    <input type="text" name="slug" class="form-control" required>
+  </div>
+  <div class="mb-3">
+    <label class="form-label">เนื้อหา (HTML)</label>
+    <textarea name="content" class="form-control" rows="5" required></textarea>
+  </div>
+  <button type="submit" class="btn btn-primary">บันทึก</button>
+</form>

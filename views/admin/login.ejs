@@ -1,0 +1,12 @@
+<% layout('../layout', {title: 'เข้าสู่ระบบผู้ดูแล', pages: []}); %>
+<h2>เข้าสู่ระบบผู้ดูแล</h2>
+<% if (typeof error !== 'undefined') { %>
+<div class="alert alert-danger"><%= error %></div>
+<% } %>
+<form method="POST">
+  <div class="mb-3">
+    <label class="form-label">รหัสผ่าน</label>
+    <input type="password" name="password" class="form-control" required>
+  </div>
+  <button type="submit" class="btn btn-primary">เข้าสู่ระบบ</button>
+</form>
